@@ -15,10 +15,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures {
-        viewBinding = true
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -37,7 +33,7 @@ android {
 
 dependencies {
     implementation ("com.google.android.gms:play-services-maps:17.0.1")
-    implementation ("com.google.android.libraries.places:places:2.4.0")
+    implementation ("com.google.android.libraries.places:places:2.6.0")
     implementation ("com.google.maps:google-maps-services:0.18.0")
     implementation ("org.slf4j:slf4j-simple:1.7.25")
     implementation ("com.google.maps.android:android-maps-utils:3.4.0")

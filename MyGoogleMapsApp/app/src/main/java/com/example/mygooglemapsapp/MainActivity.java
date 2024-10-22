@@ -81,11 +81,12 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
         // En onMapReady
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
-        mMap = googleMap;
+
         // Añade un marcador en Sydney y mueve la cámara
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new
@@ -93,6 +94,12 @@ public class MainActivity extends AppCompatActivity implements
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12));
         // Habilitar el botón de "Mi Ubicación" y comprobar permisos
         enableMyLocation();
+
+        // Centrar el mapa en la ubicación actual
+        centerMapOnMyLocation();
+
+        // Llamar a la función de buscar lugares cercanos
+        searchNearbyPlaces();
     }
 
     // Método para centrar el mapa en la ubicación actual (requiere permisos)
@@ -182,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements
             }
         }
     }
+
     private void searchPlace() {
         String query = editTextSearch.getText().toString();
         if (!query.isEmpty()) {
