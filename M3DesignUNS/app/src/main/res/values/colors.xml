@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#D20037</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="secondary">#00d29a</color>
+    <color name="onSecondary">#000000</color>
+
+    <!-- Colores para el modo oscuro -->
+    <color name="primary_dark">#c4002b</color>
+    <color name="secondary_dark">#006732</color>
+</resources>
