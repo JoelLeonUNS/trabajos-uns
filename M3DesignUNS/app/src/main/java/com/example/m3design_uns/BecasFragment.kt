@@ -33,7 +33,24 @@ class BecasFragment : Fragment() {
                 provider = "PRONABEC",
                 deadline = "2024-03-31",
                 eligibility = "Estudiantes de bajos recursos con alto rendimiento académico",
-                type = "Completa"
+                type = "Completa",
+                benefits = listOf(
+                    "Cobertura total de matrícula",
+                    "Subvención mensual",
+                    "Subvención para alimentación",
+                    "Subvención para movilidad local"
+                ),
+                requirements = listOf(
+                    "Haber concluido la educación secundaria",
+                    "Pertenecer al tercio superior de su promoción",
+                    "Tener ingresos familiares menores al valor de la UIT"
+                ),
+                applicationProcess = listOf(
+                    "Inscripción en la plataforma del PRONABEC",
+                    "Presentación de documentos",
+                    "Evaluación socioeconómica",
+                    "Evaluación académica"
+                )
             ),
             Scholarship(
                 id = 2,
@@ -41,7 +58,20 @@ class BecasFragment : Fragment() {
                 provider = "Universidad Nacional del Santa",
                 deadline = "2024-04-15",
                 eligibility = "Estudiantes con promedio ponderado superior a 16",
-                type = "Parcial"
+                type = "Parcial",
+                benefits = listOf(
+                    "Cobertura parcial de matrícula",
+                    "Subvención mensual"
+                ),
+                requirements = listOf(
+                    "Haber concluido al menos un ciclo académico",
+                    "Tener promedio ponderado superior a 16"
+                ),
+                applicationProcess = listOf(
+                    "Inscripción en la plataforma de la UNS",
+                    "Presentación de documentos",
+                    "Evaluación académica"
+                )
             ),
             Scholarship(
                 id = 3,
@@ -49,7 +79,21 @@ class BecasFragment : Fragment() {
                 provider = "Consejo Nacional de Ciencia y Tecnología",
                 deadline = "2024-05-30",
                 eligibility = "Estudiantes de últimos años con proyecto de investigación",
-                type = "Completa"
+                type = "Completa",
+                benefits = listOf(
+                    "Cobertura total de matrícula",
+                    "Subvención mensual",
+                    "Subvención para investigación"
+                ),
+                requirements = listOf(
+                    "Haber concluido al menos el 70% de los créditos",
+                    "Tener un proyecto de investigación aprobado"
+                ),
+                applicationProcess = listOf(
+                    "Inscripción en la plataforma del CONCYTEC",
+                    "Presentación de proyecto de investigación",
+                    "Evaluación de proyecto"
+                )
             )
         )
 

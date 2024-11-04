@@ -15,5 +15,5 @@
     <color name="md_theme_light_primary">#D20037</color> <!-- Color principal (Ejemplo morado) -->
     <color name="md_theme_light_onSurfaceVariant">#FF757575</color> <!-- Color de variante -->
     <color name="md_theme_light_onSurface">#FF121212</color> <!-- Color de texto -->
-
+    <color name="colorOnSurface">#000000</color>
 </resources>

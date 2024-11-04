@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Contenedor principal en LinearLayout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Botón de retroceso y título -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/arrow_back_24px"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:onClick="onBackPressed" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beca_title"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beca 18"
+                android:textColor="?attr/colorPrimary" />
+        </LinearLayout>
+
+        <!-- Proveedor -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/beca_provider"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proveedor: PRONABEC"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="8dp" />
+
+        <!-- Fecha límite con ícono -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/calendar_today_24px"
+                android:contentDescription="Fecha límite" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beca_deadline"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha límite: 2024-03-31"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Elegibilidad con ícono -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/school_24px"
+                android:contentDescription="Elegibilidad" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beca_eligibility"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elegibilidad: Estudiantes de bajos recursos con alto rendimiento académico"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Beneficios con ícono y lista dinámica -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/attach_money_24px"
+                android:contentDescription="Beneficios" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beneficios"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginStart="8dp"
+                android:textColor="?attr/colorOnSurface"/>
+        </LinearLayout>
+
+        <!-- Contenedor dinámico para la lista de beneficios -->
+        <LinearLayout
+            android:id="@+id/benefits_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp" />
+
+        <!-- Requisitos con ícono y lista dinámica -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/description_24px"
+                android:contentDescription="Requisitos" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requisitos"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginStart="8dp"
+                android:textColor="?attr/colorOnSurface"/>
+        </LinearLayout>
+
+        <!-- Contenedor dinámico para la lista de requisitos -->
+        <LinearLayout
+            android:id="@+id/requirements_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp" />
+
+        <!-- Proceso de Postulación con ícono y lista dinámica -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/footprint_24px"
+                android:contentDescription="Proceso de Postulación" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proceso de Postulación"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginStart="8dp"
+                android:textColor="?attr/colorOnSurface"/>
+        </LinearLayout>
+
+        <!-- Contenedor dinámico para la lista de proceso de postulación -->
+        <LinearLayout
+            android:id="@+id/application_process_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp" />
+
+        <!-- Botón de postulación -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_apply"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postular a esta Beca"
+            android:layout_marginTop="24dp"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

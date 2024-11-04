@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             // Reemplazar el contenedor con el fragmento de becas
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, BecasFragment())
+                .replace(R.id.fragmentContainer, BecaDetalleFragment())
                 .commit()
         }
     }
