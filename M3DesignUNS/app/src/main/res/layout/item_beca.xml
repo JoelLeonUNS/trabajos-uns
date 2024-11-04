@@ -1,0 +1,79 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_beca"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/md_theme_light_outline"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Título de la Beca -->
+        <TextView
+            android:id="@+id/tv_beca_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beca 18"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textColor="@color/md_theme_light_primary"
+            android:textStyle="bold" />
+
+        <!-- Proveedor de la Beca -->
+        <TextView
+            android:id="@+id/tv_beca_provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRONABEC"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/md_theme_light_onSurfaceVariant" />
+
+        <!-- Elegibilidad de la Beca -->
+        <TextView
+            android:id="@+id/tv_beca_eligibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estudiantes de bajos recursos con alto rendimiento académico"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:layout_marginTop="8dp" />
+
+        <!-- Fecha límite -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/calendar_today_24px" />
+
+            <TextView
+                android:id="@+id/tv_beca_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha límite: 2024-03-31"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="@color/md_theme_light_onSurface"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Botón Ver Detalles -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ver_detalles"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver detalles"
+            android:textColor="@color/md_theme_light_primary"
+            android:icon="@drawable/chevron_right_24px"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

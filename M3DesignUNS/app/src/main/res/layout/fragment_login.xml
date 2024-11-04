@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/material_dynamic_neutral100"
-    tools:context="ui.login.LoginFragment">
+    tools:context=".LoginFragment">
 
     <!-- Card for the login form -->
     <com.google.android.material.card.MaterialCardView
@@ -100,9 +100,13 @@
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="@color/primary"
                 android:layout_gravity="center"
-                android:paddingTop="8dp"
+                android:paddingTop="10dp"
                 android:clickable="true"
-                android:focusable="true"/>
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
 
             <!-- Login button -->
             <com.google.android.material.button.MaterialButton
@@ -126,7 +130,11 @@
                 android:layout_gravity="center"
                 android:paddingTop="16dp"
                 android:clickable="true"
-                android:focusable="true"/>
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

@@ -1,10 +1,9 @@
-package com.example.m3design_uns.ui.login
+package com.example.m3design_uns
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.m3design_uns.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
