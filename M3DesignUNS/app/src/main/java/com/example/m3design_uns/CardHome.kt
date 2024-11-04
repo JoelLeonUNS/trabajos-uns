@@ -4,5 +4,6 @@ data class CardHome(
     val id: String,
     val title: String,
     val content: String,
-    val iconResId: Int
+    val iconResId: Int,
+    val color: Int
 )

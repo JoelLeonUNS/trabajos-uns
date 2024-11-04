@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class CardHomeAdapter (private val cards: List<CardHome>):
@@ -28,11 +29,13 @@ class CardHomeAdapter (private val cards: List<CardHome>):
             private val content: TextView = itemView.findViewById(R.id.tv_card_home_content)
             private val icon: ImageView = itemView.findViewById(R.id.iv_card_home_image)
             private val btnViewMore: Button = itemView.findViewById(R.id.btn_ver_mas)
+            private val cardView: CardView = itemView.findViewById(R.id.card_home)
 
             fun bind(card: CardHome) {
                 title.text = card.title
                 content.text = card.content
                 icon.setImageResource(card.iconResId)
+                cardView.setCardBackgroundColor(card.color)
                 btnViewMore.setOnClickListener {
                     //Lógica
                 }

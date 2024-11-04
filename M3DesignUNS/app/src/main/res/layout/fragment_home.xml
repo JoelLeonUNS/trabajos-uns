@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
@@ -77,13 +76,13 @@
     </ScrollView>
 
 
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
-        android:menu="@menu/bottom_nav_menu" />
+        android:menu="@menu/bottom_nav_menu" />-->
 
 </RelativeLayout>

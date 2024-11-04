@@ -1,5 +1,6 @@
 package com.example.m3design_uns
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,11 +21,11 @@ class HomeFragment : Fragment() {
 
         // Define las secciones que quieres mostrar
         val cards = listOf(
-            CardHome("announcements", "Anuncios Oficiales", "Últimos anuncios y comunicados oficiales de la universidad.", R.drawable.campaign_24px),
-            CardHome("scholarships", "Becas", "Información sobre becas disponibles y procesos de postulación.", R.drawable.featured_seasonal_and_gifts_24px),
-            CardHome("contests", "Concursos UNS", "Concursos académicos y oportunidades de participación.", R.drawable.dock_to_bottom_24px),
-            CardHome("training", "Capacitaciones", "Programas de capacitación y desarrollo profesional.", R.drawable.group_24px),
-            CardHome("community", "Comunidad EPISI", "Espacio dedicado a la comunidad de estudiantes.", R.drawable.meeting_24px)
+            CardHome("announcements", "Anuncios Oficiales", "Últimos anuncios y comunicados oficiales de la universidad.", R.drawable.campaign_24px, Color.parseColor("#f8f8f7")),
+            CardHome("scholarships", "Becas", "Información sobre becas disponibles y procesos de postulación.", R.drawable.featured_seasonal_and_gifts_24px, Color.parseColor("#f8f8f7")),
+            CardHome("contests", "Concursos UNS", "Concursos académicos y oportunidades de participación.", R.drawable.dock_to_bottom_24px, Color.parseColor("#f8f8f7")),
+            CardHome("training", "Capacitaciones", "Programas de capacitación y desarrollo profesional.", R.drawable.group_24px, Color.parseColor("#f8f8f7")),
+            CardHome("community", "Comunidad EPISI", "Espacio dedicado a la comunidad de estudiantes.", R.drawable.meeting_24px, Color.parseColor("#f8f8f7"))
         )
 
         val adapter = CardHomeAdapter(cards)
