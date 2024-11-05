@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AnnouncementAdapter (private val announcements: List<Announcement>):
+class AnnouncementAdapter (private val announcements: List<Announcement>, private val onViewMoreClick: (Announcement) -> Unit):
     RecyclerView.Adapter<AnnouncementAdapter.SectionViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SectionViewHolder {
@@ -33,7 +33,7 @@ class AnnouncementAdapter (private val announcements: List<Announcement>):
             date.text = announcement.date
             content.text = announcement.content
             btnViewMore.setOnClickListener {
-                //Lógica
+                onViewMoreClick(announcement)
             }
         }
     }
