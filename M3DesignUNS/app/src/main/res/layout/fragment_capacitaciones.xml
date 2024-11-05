@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ConcursoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/tv_capacitaciones_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacitaciones"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableStart="@drawable/import_contacts_24px"
+        android:drawablePadding="10dp"
+        android:drawableTint="#D20037" />
+
+    <EditText
+        android:id="@+id/input_capacitaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Buscar capacitaciones..."
+        android:drawableStart="@drawable/search_24px"
+        android:drawableTint="@color/black"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:background="@drawable/search_input_background"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_capacitaciones_title" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_capacitaciones"
+        app:layout_constraintBottom_toTopOf="@+id/btnCapacitaciones">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Introducción a la Inteligencia Artificial"
+                        android:textColor="#D20037"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/instructorTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instructor: Dr. Carlos Rodríguez"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Curso introductorio sobre los fundamentos de la Inteligencia Artificial y sus aplicaciones."
+                        android:textColor="#808080"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Inicio: 2024-05-15"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/calendar_today_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duración: 20horas"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/schedule_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Más información"
+                        android:textColor="#D20037"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:drawableEnd="@drawable/chevron_right_24px"
+                        android:drawablePadding="8dp"
+                        android:layout_gravity="end"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Taller de Redacción Científica"
+                        android:textColor="#D20037"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instructor: Dra. María Sánchez"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Taller práctico para mejorar las habilidades de redacción de artículos científicos."
+                        android:textColor="#808080"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Inicio: 2024-06-30"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/calendar_today_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duración: 15 horas"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/schedule_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Más información"
+                        android:textColor="#D20037"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:drawableEnd="@drawable/chevron_right_24px"
+                        android:drawablePadding="8dp"
+                        android:layout_gravity="end"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gestión de Proyectos Ágiles"
+                        android:textColor="#D20037"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instructor: Ing. Jorge Mendoza"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capacitación en metodologías ágiles para la gestión eficiente de proyectos."
+                        android:textColor="#808080"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Inicio: 2024-04-20"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/calendar_today_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duración: 25 horas"
+                        android:textColor="#808080"
+                        android:drawableStart="@drawable/person_24px"
+                        android:drawablePadding="8dp"
+                        android:paddingTop="4dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Más información"
+                        android:textColor="#D20037"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:drawableEnd="@drawable/chevron_right_24px"
+                        android:drawablePadding="8dp"
+                        android:layout_gravity="end"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCapacitaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver todas las capacitaciones"
+        android:backgroundTint="#D20037"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
