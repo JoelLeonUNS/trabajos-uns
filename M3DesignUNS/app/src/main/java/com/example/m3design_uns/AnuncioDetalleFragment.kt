@@ -51,7 +51,14 @@ class AnuncioDetalleFragment : Fragment() {
             }
         }
 
+        // Configurar el botón de retroceso
+        val backArrow: ImageView = view.findViewById(R.id.arrow_back)
+        backArrow.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
+
         return view
     }
+
 
 }
