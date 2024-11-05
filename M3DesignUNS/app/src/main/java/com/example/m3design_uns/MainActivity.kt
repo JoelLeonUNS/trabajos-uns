@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         // Inicializa el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
+
+
         // Verificar si el Fragment ya está cargado para evitar recargarlo al rotar la pantalla
         if (savedInstanceState == null) {
             // Reemplazar el contenedor con el fragmento de becas
@@ -28,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { item ->
             val selectedFragment = when (item.itemId) {
                 R.id.navigation_home -> HomeFragment() // Cambia el fragmento según corresponda
+                R.id.navigation_anuncios -> AnunciosFragment() // Cambia el fragmento según corresponda
                 R.id.navigation_becas -> BecasFragment() // Cambia el fragmento según corresponda
-                R.id.navigation_concursos -> ConcursoFragment() // Cambia el fragmento según corresponda
                 //R.id.navigation_capacitaciones -> ProfileFragment() // Cambia el fragmento según corresponda
                 //R.id.navigation_comunidad -> SettingsFragment() // Cambia el fragmento según corresponda
                 else -> HomeFragment()

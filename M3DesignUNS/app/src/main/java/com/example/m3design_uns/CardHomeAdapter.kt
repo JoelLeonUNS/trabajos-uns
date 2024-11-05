@@ -7,10 +7,15 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 
-class CardHomeAdapter (private val cards: List<CardHome>):
-    RecyclerView.Adapter<CardHomeAdapter.SectionViewHolder>() {
+class CardHomeAdapter (
+    private val cards: List<CardHome>,
+    private val fragmentManager: FragmentManager,
+    private val containerId: Int
+): RecyclerView.Adapter<CardHomeAdapter.SectionViewHolder>()
+{
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SectionViewHolder {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
@@ -37,7 +42,11 @@ class CardHomeAdapter (private val cards: List<CardHome>):
                 icon.setImageResource(card.iconResId)
                 cardView.setCardBackgroundColor(card.color)
                 btnViewMore.setOnClickListener {
-                    //Lógica
+                    // Realizar la transacción al fragmento especificado
+                    fragmentManager.beginTransaction()
+                        .replace(containerId, card.destinationFragment)
+                        .addToBackStack(null)
+                        .commit()
                 }
             }
         }

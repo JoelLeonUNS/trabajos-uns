@@ -6,16 +6,16 @@
     android:title="Home" />
 
     <item
-        android:id="@+id/navigation_becas"
+        android:id="@+id/navigation_anuncios"
         android:icon="@drawable/featured_seasonal_and_gifts_24px"
+    android:title="Anuncios" />
+
+    <item
+        android:id="@+id/navigation_becas"
+        android:icon="@drawable/dock_to_bottom_24px"
     android:title="Becas" />
 
-    <item
-        android:id="@+id/navigation_concursos"
-        android:icon="@drawable/dock_to_bottom_24px"
-    android:title="Concursos" />
-
-    <item
+    <!-- <item
         android:id="@+id/navigation_capacitaciones"
         android:icon="@drawable/group_24px"
     android:title="Capacitaciones" />
@@ -23,5 +23,5 @@
     <item
         android:id="@+id/navigation_comunidad"
         android:icon="@drawable/meeting_24px"
-    android:title="Comunidad" />
+    android:title="Comunidad" /> -->
 </menu>
