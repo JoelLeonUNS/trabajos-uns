@@ -10,9 +10,8 @@
         android:id="@+id/btnBackToCommunity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
         android:text="Volver a la Comunidad"
-        android:textColor="@color/grey"
+        android:textColor="@color/white"
         app:icon="@drawable/arrow_back_24px"
         android:drawablePadding="18dp" />
 

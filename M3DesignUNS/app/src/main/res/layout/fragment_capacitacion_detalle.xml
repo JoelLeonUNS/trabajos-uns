@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Botón Volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/arrow_back_24px"
+            android:text="Volver a Capacitaciones" />
+
+        <!-- Card para Detalles de la Capacitación -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Título y Modalidad -->
+            <TextView
+                android:id="@+id/txtTituloCapacitacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Introducción a la Inteligencia Artificial"
+                android:textSize="20sp"
+                android:textColor="#D20037"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInstructor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructor: Dr. Carlos Rodríguez"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <!-- Modalidad -->
+            <TextView
+                android:id="@+id/txtModalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Virtual"
+                android:textColor="#D20037"
+                android:layout_gravity="end"
+                android:padding="8dp" />
+
+            <!-- Detalles de la Capacitación -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar_today_24px"
+                    android:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/txtFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio: 2024-04-10"
+                    android:layout_marginStart="8dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/schedule_24px"
+                    android:tint="#D20037"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/txtDuracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duración: 20 horas"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Descripción -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curso introductorio sobre los fundamentos de la Inteligencia Artificial y sus aplicaciones en la industria moderna."
+                android:textColor="#757575" />
+
+            <!-- Temas -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/txtTemas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Fundamentos de la IA\n• Machine Learning y sus aplicaciones\n• Redes Neuronales\n• Procesamiento del Lenguaje Natural\n• Ética en la IA"
+                android:textColor="#757575" />
+
+            <!-- Requisitos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requisitos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/txtRequisitos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Conocimientos básicos de programación\n• Fundamentos de estadística\n• Computadora con acceso a internet"
+                android:textColor="#757575" />
+
+            <!-- Cronograma -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cronograma"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TableRow>
+                    <TextView
+                        android:text="Fecha"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="Horario"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="Tema"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <!-- Fila de cronograma ejemplo -->
+                <TableRow>
+                    <TextView
+                        android:text="10 de abril"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="18:00 - 21:00"
+                        android:padding="8dp" />
+                    <TextView
+                        android:text="Introducción a la IA"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <!-- Agregar más filas según el cronograma -->
+            </TableLayout>
+
+            <!-- Botón de Inscripción -->
+            <Button
+                android:id="@+id/btnInscribirse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inscribirse a la Capacitación"
+                android:background="#D20037"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
