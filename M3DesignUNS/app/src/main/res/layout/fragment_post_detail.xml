@@ -13,8 +13,8 @@
         android:backgroundTint="@android:color/transparent"
         android:text="Volver a la Comunidad"
         android:textColor="@color/grey"
-        app:src="@drawable/arrow_back_24px"
-        android:drawablePadding="8dp" />
+        app:icon="@drawable/arrow_back_24px"
+        android:drawablePadding="18dp" />
 
     <!-- Detalles de la publicación -->
     <com.google.android.material.card.MaterialCardView
