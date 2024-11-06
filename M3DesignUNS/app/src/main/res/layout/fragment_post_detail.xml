@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!-- Botón para volver a la comunidad -->
+    <Button
+        android:id="@+id/btnBackToCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Volver a la Comunidad"
+        android:textColor="@color/grey"
+        app:src="@drawable/arrow_back_24px"
+        android:drawablePadding="8dp" />
+
+    <!-- Detalles de la publicación -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@drawable/arrow_back_24px"
-            app:title="Detalle del post" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,126 +28,125 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <com.google.android.material.card.MaterialCardView
+            <!-- Información del autor -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAuthorAvatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/account_circle_24px"
+                    />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:layout_marginStart="8dp">
 
-                    <!-- Author Info -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/authorAvatar"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="16dp">
-
-                            <TextView
-                                android:id="@+id/authorName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                style="@style/TextAppearance.Material3.TitleMedium"/>
-
-                            <TextView
-                                android:id="@+id/postDate"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                style="@style/TextAppearance.Material3.BodySmall"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Post Content -->
                     <TextView
-                        android:id="@+id/postContent"
-                        android:layout_width="match_parent"
+                        android:id="@+id/tvAuthorName"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        style="@style/TextAppearance.Material3.BodyLarge"/>
+                        android:text="Ana García"
+                        android:textAppearance="?attr/textAppearanceSubtitle1" />
 
-                    <!-- Interaction Buttons -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tvPostDate"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="16dp">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/likeButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Me gusta"
-                            style="@style/Widget.Material3.Button.TextButton"
-                            app:icon="@drawable/thumb_up_24px"/>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/commentCountButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Comentarios"
-                            style="@style/Widget.Material3.Button.TextButton"
-                            app:icon="@drawable/ic_comment"/>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/shareButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Compartir"
-                            style="@style/Widget.Material3.Button.TextButton"
-                            app:icon="@drawable/share_24px"/>
-                    </LinearLayout>
+                        android:text="2024-02-15"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@color/grey" />
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
-            <!-- Comments Section -->
+            <!-- Contenido de la publicación -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Comentarios"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                style="@style/TextAppearance.Material3.TitleLarge"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/commentsRecyclerView"
+                android:id="@+id/tvPostContent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <!-- Comment Input -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/commentInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Escribe un comentario..."/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/postCommentButton"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Comentar"/>
+                android:text="¿Alguien tiene los apuntes de la clase de Estructuras de Datos del profesor Martínez?"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/grey" />
 
+            <!-- Botones de acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    app:startIconDrawable="@drawable/thumb_up_24px"
+                    android:text="15 Me gusta"
+                    android:textColor="@color/grey" />
+
+                <Button
+                    android:id="@+id/btnComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    app:startIconDrawable="@drawable/ic_comment"
+                    android:text="3 Comentarios"
+                    android:textColor="@color/grey"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Sección de comentarios -->
+    <TextView
+        android:id="@+id/tvCommentsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Comentarios"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:textColor="@color/primary_dark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campo para escribir un nuevo comentario -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe un comentario...">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNewComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmitComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primary"
+            android:text="Comentar"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

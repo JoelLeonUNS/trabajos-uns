@@ -18,10 +18,10 @@
     <!-- <item
         android:id="@+id/navigation_capacitaciones"
         android:icon="@drawable/group_24px"
-    android:title="Capacitaciones" />
+    android:title="Capacitaciones" />-->
 
     <item
         android:id="@+id/navigation_comunidad"
         android:icon="@drawable/meeting_24px"
-    android:title="Comunidad" /> -->
+    android:title="Comunidad" />
 </menu>

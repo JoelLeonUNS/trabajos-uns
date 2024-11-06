@@ -1,31 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Título de la Comunidad -->
     <TextView
+        android:id="@+id/tvCommunityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comunidad EPISI"
+        android:textStyle="bold"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:textColor="@color/black"
         android:drawableStart="@drawable/group_24px"
-        android:drawablePadding="8dp"
-        style="@style/TextAppearance.Material3.HeadlineLarge"/>
+        android:drawablePadding="8dp" />
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/searchBar"
-        android:layout_width="360dp"
-        android:text="Buscar"
-        android:layout_marginLeft="6dp"
+    <!-- Campo de búsqueda -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        android:hint="       Buscar en la comunidad..."
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/search_24px">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchCommunity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input para escribir una publicación nueva -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,34 +47,41 @@
             android:padding="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/postInput"
+                android:id="@+id/etNewPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="¿Qué quieres compartir con la comunidad?"/>
+                android:hint="¿Qué quieres compartir con la comunidad?"
+                android:inputType="textMultiLine" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/publishButton"
+            <Button
+                android:id="@+id/btnPublish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="8dp"
-                android:text="Publicar"/>
+                android:backgroundTint="@color/primary"
+                android:text="Publicar"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- Lista de publicaciones -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/postsRecyclerView"
+        android:id="@+id/rvPosts"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:overScrollMode="never" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loadMoreButton"
+    <!-- Botón para cargar más publicaciones -->
+    <Button
+        android:id="@+id/btnLoadMorePosts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Cargar más publicaciones"/>
-
+        android:backgroundTint="@color/primary"
+        android:text="Cargar más publicaciones"
+        android:textColor="@android:color/white" />
 </LinearLayout>

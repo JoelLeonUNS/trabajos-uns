@@ -1,5 +1,6 @@
 package com.example.m3design_uns
 
+import CommunityFragment
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +28,7 @@ class HomeFragment : Fragment(){
             CardHome("scholarships", "Becas", "Información sobre becas disponibles y procesos de postulación.", R.drawable.featured_seasonal_and_gifts_24px, Color.parseColor("#f8f8f7"), BecasFragment()),
             CardHome("contests", "Concursos UNS", "Concursos académicos y oportunidades de participación.", R.drawable.dock_to_bottom_24px, Color.parseColor("#f8f8f7"), ConcursoFragment()),
             CardHome("training", "Capacitaciones", "Programas de capacitación y desarrollo profesional.", R.drawable.group_24px, Color.parseColor("#f8f8f7"), AnunciosFragment()),
-            CardHome("community", "Comunidad EPISI", "Espacio dedicado a la comunidad de estudiantes.", R.drawable.meeting_24px, Color.parseColor("#f8f8f7"), AnunciosFragment())
+            CardHome("community", "Comunidad EPISI", "Espacio dedicado a la comunidad de estudiantes.", R.drawable.meeting_24px, Color.parseColor("#f8f8f7"), CommunityFragment())
         )
 
         val adapter = CardHomeAdapter(cards, parentFragmentManager, R.id.fragmentContainer)
