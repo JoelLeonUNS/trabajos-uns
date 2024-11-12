@@ -1,20 +1,44 @@
 package com.example.appejercicioss09
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.appejercicioss09.R
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val btnCaso01 = findViewById<Button>(R.id.btnActividad1)
+        val btnCaso02 = findViewById<Button>(R.id.btnActividad2)
+        val btnCaso03 = findViewById<Button>(R.id.btnActividad3)
+        val btnCaso04 = findViewById<Button>(R.id.btnActividad4)
+        val btnCaso05 = findViewById<Button>(R.id.btnActividad5)
+        val btnCaso06 = findViewById<Button>(R.id.btnActividad6)
+
+        btnCaso01.setOnClickListener { navegarActividad(1) }
+        btnCaso02.setOnClickListener { navegarActividad(2) }
+        btnCaso03.setOnClickListener { navegarActividad(3) }
+        btnCaso04.setOnClickListener { navegarActividad(4) }
+        btnCaso05.setOnClickListener { navegarActividad(5) }
+        btnCaso06.setOnClickListener { navegarActividad(6) }
+
+
+    }
+
+    private fun navegarActividad(nro: Int) {
+        var intent = Intent(this, MainActivity::class.java)
+        when (nro) {
+            1 -> intent = Intent(this, Caso01Activity::class.java)
+            2 -> intent = Intent(this, Caso01Activity::class.java)
+            3 -> intent = Intent(this, Caso01Activity::class.java)
+            4 -> intent = Intent(this, Caso01Activity::class.java)
+            5 -> intent = Intent(this, Caso01Activity::class.java)
+            6 -> intent = Intent(this, Caso01Activity::class.java)
         }
+        startActivity(intent);
     }
 }

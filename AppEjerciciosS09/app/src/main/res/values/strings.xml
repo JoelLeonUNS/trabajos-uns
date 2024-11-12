@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AppEjerciciosS09</string>
+    <string name="btnRegresar">Regresar al Menú</string>
+    <string name="btnActividad01_desc">Número Primo o No Primo</string>
+    <string name="btnActividad02_desc">Edades de Ana y Juan</string>
+    <string name="btnActividad03_desc">Área de un Triángulo</string>
+    <string name="btnActividad04_desc">Tiempo de Construcción</string>
+    <string name="btnActividad05_desc">Factores y Composición del 60</string>
+    <string name="btnActividad06_desc">Número Compuesto o No</string>
+
+    <string name="tvTitulo01">1. Número Primo o No Primo</string>
+    <string name="tvMensaje01">Elabora un programa que permita al usuario ingresar un número y determine si es un número primo o no.</string>
+    <string name="tvTitulo02">2. Edades de Ana y Juan</string>
+    <string name="tvTitulo03">3. Área de un Triángulo</string>
+    <string name="tvTitulo04">4. Tiempo de Construcción</string>
+    <string name="tvTitulo05">5. Factores y Composición del 60</string>
+    <string name="tvTitulo06">6. Número Compuesto o No</string>
 </resources>
