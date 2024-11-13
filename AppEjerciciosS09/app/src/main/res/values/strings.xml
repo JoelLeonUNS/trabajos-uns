@@ -11,8 +11,19 @@
     <string name="tvTitulo01">1. Número Primo o No Primo</string>
     <string name="tvMensaje01">Elabora un programa que permita al usuario ingresar un número y determine si es un número primo o no.</string>
     <string name="tvTitulo02">2. Edades de Ana y Juan</string>
+    <string name="tvMensaje02">Elabora un programa que calcule las edades actuales de Ana y su hermano Juan. Sabemos que Ana tiene 5 años más que Juan. El programa debe solicitar la edad de Ana y proporcionar las edades actuales de ambos.</string>
     <string name="tvTitulo03">3. Área de un Triángulo</string>
+    <string name="tvMensaje03">Elaborar un programa que calcule el área de un triangulo. El Usuario deberá ingresar la base y la altura.</string>
     <string name="tvTitulo04">4. Tiempo de Construcción</string>
+    <string name="tvMensaje04">Elabora un programa que calcule cuantos días necesitarán 6 trabajadores para construir un muro, sabiendo que 4 trabajadores pueden hacerlo en 6 días. Asume que todos los trabajadores trabajan al mismo ritmo. El programa debe solicitar el numero de trabajadores y los dias iniciales para el calculo.</string>
     <string name="tvTitulo05">5. Factores y Composición del 60</string>
+    <string name="tvMensaje05">Elabora un programa que liste los factores del numero 60 y determine si es un número compuesto. El programa debe mostrar la lista de factores y un mensaje que explique si 60 es un numero compuesto o no. Justificando su respuesta.</string>
     <string name="tvTitulo06">6. Número Compuesto o No</string>
+    <string name="tvMensaje06">Elaborar un programa que permita ingresar un número y calcule si es o no un numero compuesto utilizando la lógica de la pregunta 5.</string>
+
+    <string-array name="options_array">
+        <item>Calcular días</item>
+        <item>Calcular trabajadores</item>
+    </string-array>
+
 </resources>
