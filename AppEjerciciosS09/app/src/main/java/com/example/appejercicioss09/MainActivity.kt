@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
             2 -> intent = Intent(this, Caso02Activity::class.java)
             3 -> intent = Intent(this, Caso03Activity::class.java)
             4 -> intent = Intent(this, Caso04Activity::class.java)
-            5 -> intent = Intent(this, Caso01Activity::class.java)
-            6 -> intent = Intent(this, Caso01Activity::class.java)
+            5 -> intent = Intent(this, Caso05Activity::class.java)
+            6 -> intent = Intent(this, Caso06Activity::class.java)
         }
         startActivity(intent);
     }
