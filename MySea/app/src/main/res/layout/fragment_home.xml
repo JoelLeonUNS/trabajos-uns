@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Mapa Placeholder -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#E0F7FA"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_map_pin"
+                android:tint="#0288D1"
+                android:layout_gravity="center"
+                android:contentDescription="Mapa" />
+        </FrameLayout>
+
+        <!-- Botón Reportar Actividad Ilegal -->
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:text="Reportar Actividad Ilegal"
+            android:drawableLeft="@drawable/ic_alert_triangle"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Consejo del Día -->
+        <LinearLayout
+            android:id="@+id/tipContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#E8F5E9"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consejo del día"
+                android:textColor="#1B5E20"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduce el uso de plásticos de un solo uso para proteger nuestros océanos."
+                android:textColor="#2E7D32"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnCloseTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerrar"
+                android:textColor="#2E7D32"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Título de Reportes Recientes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reportes Recientes"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0288D1"
+            android:layout_marginBottom="8dp" />
+
+        <!-- RecyclerView para Reportes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false" />
+    </LinearLayout>
+</ScrollView>
